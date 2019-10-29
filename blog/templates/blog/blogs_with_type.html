@@ -1,0 +1,61 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width,initial-scale=1.0">#}
+{#    <meta http-equiv="x-ua-compatible" content="ie=edge">#}
+{#    <title>{{ blog_type.type_name }}</title>#}
+{#</head>#}
+{#<body>#}
+{#    <div>#}
+{#        <a href="{% url 'home' %}">#}
+{#            <h2>个人博客网站</h2>#}
+{#        </a>#}
+{#    </div>#}
+{#    <h3>{{ blog_type.type_name }}</h3>#}
+{#    {% for blog in blogs %}#}
+{#        <a href="{% url 'blog_detail' blog.pk %}">#}
+{#            {{ blog.title }}#}
+{#        </a>#}
+{#        <p>{{ blog.content|truncatechars:30 }}</p>#}
+{#        {% empty %}#}
+{#        <p>暂时咩没有博客</p>#}
+{#    {% endfor %}#}
+{#</body>#}
+{#</html>#}
+{##}
+{#{% extends 'base.html' %}#}
+{#页面标题#}
+{#{% block title %}#}
+{#    {{blog_type.type_name}}#}
+{#{% endblock %}#}
+{#页面内容#}
+{##}
+{#{% block nav_blog_active %}#}
+{#    active#}
+{#{% endblock %}#}
+{##}
+{#{% block content %}#}
+{#    <h3>{{blog_type.type_name}}</h3>#}
+{#    {% for blog in blogs %}#}
+{#        <a href="{% url 'blog_detail' blog.pk %}">#}
+{#                {{ blog.title }}#}
+{#        </a>#}
+{#        <p>{{ blog.content|truncatechars:30 }}</p>#}
+{#        {% empty %}#}
+{#        <p>暂时没有博客</p>#}
+        {# 如果为0篇文章则显示此内容 #}
+{#    {% endfor %}#}
+{#{% endblock %}#}
+
+{% extends 'blog/blog_list.html' %}
+{#页面标题#}
+{% block title %}
+    {{blog_type.type_name}}
+{% endblock %}
+
+{% block blog_list_title %}
+    {{blog_type.type_name}}:
+{#    一共有{{ blogs_count }}篇文章#}
+    <a href="{% url 'blog_list' %}">返回博客列表</a>
+{% endblock %}

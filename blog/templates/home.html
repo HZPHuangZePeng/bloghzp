@@ -1,0 +1,32 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#    #}
+{#</body>#}
+{#</html>#}
+
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{# 标题 #}
+{% block title%}
+    我的网站|首页
+{% endblock %}
+
+{% block nav_home_active %}
+    active
+{% endblock %}
+
+{% block content %}
+    <h3 class="home-content">欢迎来到我的博客，请随便逛逛吧</h3>
+{% endblock %}

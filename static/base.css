@@ -1,0 +1,34 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin-top:70px !important;
+}
+
+
+div.blog-more{
+    margin-top: 1em;
+}
+
+ul{
+    list-style: none;
+    /*去掉li的圆点*/
+}
+
+/*div.nav{*/
+/*    background-color: #eee;*/
+/*    border-bottom: 1px solid #ccc;*/
+/*    padding:10px 5px;*/
+/*}*/
+/*div.nav a.logo {*/
+/*    display:inline-block;*/
+/*    font-size: 120%;*/
+/*}*/
+/*div.nav a{*/
+/*    text-decoration: none;*/
+/*    color:black;*/
+/*    padding:5px 10px;*/
+/*}*/
